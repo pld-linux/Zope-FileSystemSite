@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 %define		zope_subname	FileSystemSite
 Summary:	Repackaging of the CMF's FileSystem Directory Views
 Summary(pl):	Produkt zmieniaj±cy organizacje wy¶wietlania katalogów w CMF
