@@ -3,7 +3,7 @@ Summary:	Repackaging of the CMF's FileSystem Directory Views
 Summary(pl):	Produkt zmieniaj±cy organizacje wy¶wietlania katalogów w CMF
 Name:		Zope-%{zope_subname}
 Version:	1.4.1
-Release:	1
+Release:	2
 License:	ZPL 2.0
 Group:		Development/Tools
 Source0:	http://www.infrae.com/download/%{zope_subname}/%{version}/%{zope_subname}-%{version}.tgz
