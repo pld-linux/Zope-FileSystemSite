@@ -9,6 +9,7 @@ Group:		Development/Tools
 Source0:	http://www.infrae.com/download/%{zope_subname}/%{version}/%{zope_subname}-%{version}.tgz
 # Source0-md5:	5c3bf90234187f0d37ab3dcf2c4c4129
 URL:		http://zope.org/Members/philikon/FileSystemSite/
+BuildRequires:  python
 %pyrequires_eq	python-modules
 Requires:	Zope >= 2.7
 Requires:	Zope-CMF >= 1:1.4.1
