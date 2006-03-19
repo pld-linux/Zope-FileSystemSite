@@ -10,6 +10,7 @@ Source0:	http://www.infrae.com/download/%{zope_subname}/%{version}/%{zope_subnam
 # Source0-md5:	26b560b5707b17c3eb9d1bff337e3168
 URL:		http://zope.org/Members/philikon/FileSystemSite/
 BuildRequires:	python
+BuildRequires:	rpmbuild(macros) >= 1.268
 %pyrequires_eq	python-modules
 Requires:	Zope >= 2.7
 Requires:	Zope-CMF >= 1:1.4.1
@@ -22,8 +23,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 FileSystemSite repackaging of the CMF's FileSystem Directory Views
 
 %description -l pl
-FileSystemSite jest produktem Zope zmieniaj±cym sposób
-wy¶wietlania katalogów w CMF
+FileSystemSite jest produktem Zope zmieniaj±cym sposób wy¶wietlania
+katalogów w CMF
 
 %prep
 %setup -q -n %{zope_subname}
@@ -45,16 +46,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
-if [ -f /var/lock/subsys/zope ]; then
-	/etc/rc.d/init.d/zope restart >&2
-fi
+%service -q zope restart
 
 %postun
 if [ "$1" = "0" ]; then
 	/usr/sbin/installzopeproduct -d %{zope_subname}
-	if [ -f /var/lock/subsys/zope ]; then
-		/etc/rc.d/init.d/zope restart >&2
-	fi
+	%service -q zope restart
 fi
 
 %files
