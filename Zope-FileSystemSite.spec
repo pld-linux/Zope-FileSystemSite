@@ -1,6 +1,6 @@
 %define		zope_subname	FileSystemSite
 Summary:	Repackaging of the CMF's FileSystem Directory Views
-Summary(pl):	Produkt zmieniaj±cy organizacje wy¶wietlania katalogów w CMF
+Summary(pl.UTF-8):   Produkt zmieniajÄ…cy organizacje wyÅ›wietlania katalogÃ³w w CMF
 Name:		Zope-%{zope_subname}
 Version:	1.4.2
 Release:	1
@@ -22,9 +22,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 FileSystemSite repackaging of the CMF's FileSystem Directory Views
 
-%description -l pl
-FileSystemSite jest produktem Zope zmieniaj±cym sposób wy¶wietlania
-katalogów w CMF
+%description -l pl.UTF-8
+FileSystemSite jest produktem Zope zmieniajÄ…cym sposÃ³b wyÅ›wietlania
+katalogÃ³w w CMF
 
 %prep
 %setup -q -n %{zope_subname}
