@@ -1,6 +1,6 @@
 %define		zope_subname	FileSystemSite
 Summary:	Repackaging of the CMF's FileSystem Directory Views
-Summary(pl.UTF-8):   Produkt zmieniający organizacje wyświetlania katalogów w CMF
+Summary(pl.UTF-8):	Produkt zmieniający organizacje wyświetlania katalogów w CMF
 Name:		Zope-%{zope_subname}
 Version:	1.4.2
 Release:	1
